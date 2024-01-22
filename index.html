@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>慈幼葉漢小學放學</title>
+  <style>
+    /* 樣式設定 */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("bird-wings-flying-feature.gif");
+      background-color: #cccccc;
+      background-attachment: fixed;
+      background-size: fixed;
+
+    }
+    
+    .header {
+      text-align: center;
+      font-size: 24px;
+      padding: 20px;
+      background-color: #cccccc;
+      
+    }
+    
+    .container {
+      display: flex;
+    }
+    
+    .left-box {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    
+    .right-box {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+    
+    .grid-item {
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 10px;
+      font-size: 60px;
+      cursor: pointer; /* 加入游標指標 */
+    }
+    
+    .button_1{
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: red;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-size: 60px;
+      border-radius: 20px;
+    }
+
+    .button_2{
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: orange;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-size: 60px;
+      border-radius: 20px;
+    }
+
+    .button_3{
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: green;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-size: 60px;
+      border-radius: 20px;
+    }
+    
+    .button_4{
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: skyblue;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-size: 60px;
+      border-radius: 20px;
+    }
+
+    .button_5{
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: palevioletred;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-size: 60px;
+      border-radius: 20px;
+    }
+
+    .button_6{
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: plum;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-size: 60px;
+      border-radius: 20px;
+    }
+
+    .button:hover {
+      background-color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>慈幼葉漢小學放學</h1>
+  </div>
+  
+  <div class="container">
+    <div class="left-box">
+      <!-- 左邊大框的內容 -->
+      <button class="button_1" onclick="moveToRight(this)">1A</button>
+      <button class="button_1" onclick="moveToRight(this)">1B</button>
+      <button class="button_1" onclick="moveToRight(this)">1C</button>
+      <button class="button_2" onclick="moveToRight(this)">2A</button>
+      <button class="button_2" onclick="moveToRight(this)">2B</button>
+      <button class="button_2" onclick="moveToRight(this)">2C</button>
+      <button class="button_2" onclick="moveToRight(this)">2D</button>
+      <button class="button_3" onclick="moveToRight(this)">3A</button>
+      <button class="button_3" onclick="moveToRight(this)">3B</button>
+      <button class="button_3" onclick="moveToRight(this)">3C</button>
+      <button class="button_3" onclick="moveToRight(this)">3D</button>
+      <button class="button_4" onclick="moveToRight(this)">4A</button>
+      <button class="button_4" onclick="moveToRight(this)">4B</button>
+      <button class="button_4" onclick="moveToRight(this)">4C</button>
+      <button class="button_4" onclick="moveToRight(this)">4D</button>
+      <button class="button_5" onclick="moveToRight(this)">5A</button>
+      <button class="button_5" onclick="moveToRight(this)">5B</button>
+      <button class="button_5" onclick="moveToRight(this)">5C</button>
+      <button class="button_5" onclick="moveToRight(this)">5D</button>
+      <button class="button_6" onclick="moveToRight(this)">6A</button>
+      <button class="button_6" onclick="moveToRight(this)">6B</button>
+      <button class="button_6" onclick="moveToRight(this)">6C</button>
+      <button class="button_6" onclick="moveToRight(this)">6D</button>
+    </div>
+    
+    <div class="right-box">
+      <div class="grid-container" id="gridContainer">
+        <!-- 右邊大框分為3欄的內容 -->
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function moveToRight(button) {
+  var leftBox = document.querySelector('.left-box');
+  var gridContainer = document.getElementById('gridContainer');
+  var buttonName = button.innerText;
+  var newButton = document.createElement('button');
+  
+  // 套用按鈕的原始類別
+  newButton.className = button.className; 
+  
+  newButton.innerText = buttonName;
+  newButton.onclick = function() {
+    moveToLeft(this);
+  };
+  gridContainer.appendChild(newButton);
+  button.style.display = 'none'; // 將按鈕隱藏
+}
+    
+    function moveToLeft(button) {
+  var leftBox = document.querySelector('.left-box');
+  var gridContainer = document.getElementById('gridContainer');
+  var buttonName = button.innerText;
+  var newButton = document.createElement('button');
+
+  // 套用按鈕的原始類別
+  newButton.className = button.className;
+
+  newButton.innerText = buttonName;
+  newButton.onclick = function() {
+    moveToRight(this);
+  };
+  leftBox.appendChild(newButton);
+  gridContainer.removeChild(button);
+}
+    
+  </script>
+</body>
+</html>
