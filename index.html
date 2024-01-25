@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>慈幼葉漢小學放學</title>
+  <title>慈幼葉漢小學放學狀態</title>
   <style>
     /* 樣式設定 */
     body {
       font-family: Arial, sans-serif;
       background-image: url("bird-wings-flying-feature.gif");
-      background-color: #cccccc;
+      background-color: skyblue;
       background-attachment: fixed;
       background-size: fixed;
-
     }
     
     .header {
-      text-align: center;
+      width: 1860px;
+      height: 250px;
       font-size: 24px;
       padding: 20px;
-      background-color: #cccccc;
-      
+      background-position: center;
     }
     
     .container {
@@ -60,6 +59,9 @@
       margin-bottom: 10px;
       font-size: 60px;
       border-radius: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      border: 3px solid black;
     }
 
     .button_2{
@@ -71,9 +73,26 @@
       margin-bottom: 10px;
       font-size: 60px;
       border-radius: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      border: 3px solid black;
     }
 
     .button_3{
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: gold;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-size: 60px;
+      border-radius: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      border: 3px solid black;
+    }
+    
+    .button_4{
       display: inline-block;
       padding: 10px 20px;
       background-color: green;
@@ -82,39 +101,37 @@
       margin-bottom: 10px;
       font-size: 60px;
       border-radius: 20px;
-    }
-    
-    .button_4{
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: skyblue;
-      border: none;
-      cursor: pointer;
-      margin-bottom: 10px;
-      font-size: 60px;
-      border-radius: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      border: 3px solid black;
     }
 
     .button_5{
       display: inline-block;
       padding: 10px 20px;
-      background-color: palevioletred;
+      background-color: darkblue;
       border: none;
       cursor: pointer;
       margin-bottom: 10px;
       font-size: 60px;
       border-radius: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      border: 3px solid black;
     }
 
     .button_6{
       display: inline-block;
       padding: 10px 20px;
-      background-color: plum;
+      background-color: purple;
       border: none;
       cursor: pointer;
       margin-bottom: 10px;
       font-size: 60px;
       border-radius: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      border: 3px solid black;
     }
 
     .button:hover {
@@ -124,11 +141,12 @@
 </head>
 <body>
   <div class="header">
-    <h1>慈幼葉漢小學放學</h1>
+    <img src ="school_logo.jpg">
   </div>
   
   <div class="container">
     <div class="left-box">
+      <strong><font size="10">待放學班別</font></strong><br><br>
       <!-- 左邊大框的內容 -->
       <button class="button_1" onclick="moveToRight(this)">1A</button>
       <button class="button_1" onclick="moveToRight(this)">1B</button>
@@ -156,6 +174,7 @@
     </div>
     
     <div class="right-box">
+      <font size="7" ><strong>已放學班別</strong></font><br><br>
       <div class="grid-container" id="gridContainer">
         <!-- 右邊大框分為3欄的內容 -->
       </div>
